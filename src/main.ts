@@ -30,7 +30,7 @@ function sortear(itens: string[]): string | null {
 
 function getItensSorteio(textbox: HTMLInputElement): string[] | null {
     if (textbox.value.trim().length === 0)
-        return null
+        return null;
 
     return textbox.value.split("\n");
 }

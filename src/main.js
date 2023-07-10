@@ -9,11 +9,7 @@ function mostrarSorteio() {
         alert("Você precisa inserir ao mínimo um nome para sortear.");
         return;
     }
-    var itemSorteado = sortear(itens);
-    var sorteioDiv = document.getElementById("sorteio-div");
-    var resSorteio = document.getElementById("res-sorteio");
-    sorteioDiv.style.display = "none";
-    resSorteio.style.display = "block";
+    // Mostrar GIF
     var gif = document.createElement("img");
     gif.style.position = "absolute";
     gif.style.top = "0";
@@ -26,6 +22,12 @@ function mostrarSorteio() {
     setTimeout(function () {
         body.removeChild(gif);
     }, 3900);
+    // Mostrar item sorteado
+    var itemSorteado = sortear(itens);
+    var sorteioDiv = document.getElementById("sorteio-div");
+    var resSorteio = document.getElementById("res-sorteio");
+    sorteioDiv.style.display = "none";
+    resSorteio.style.display = "block";
     var itemDiv = document.querySelector(".item-sorteado");
     itemDiv.textContent = itemSorteado;
 }

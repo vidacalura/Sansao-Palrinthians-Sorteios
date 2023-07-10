@@ -14,6 +14,18 @@ function mostrarSorteio() {
     var resSorteio = document.getElementById("res-sorteio");
     sorteioDiv.style.display = "none";
     resSorteio.style.display = "block";
+    var gif = document.createElement("img");
+    gif.style.position = "absolute";
+    gif.style.top = "0";
+    gif.style.left = "0";
+    gif.style.width = "100vw";
+    gif.style.height = "100vh";
+    gif.src = "./img/contagem.gif";
+    var body = document.querySelector("body");
+    body.appendChild(gif);
+    setTimeout(function () {
+        body.removeChild(gif);
+    }, 3900);
     var itemDiv = document.querySelector(".item-sorteado");
     itemDiv.textContent = itemSorteado;
 }
